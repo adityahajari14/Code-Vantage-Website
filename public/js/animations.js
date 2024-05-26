@@ -75,5 +75,5 @@ function descriptiontypeanimation(){
     })
 }
 
-// herosectionanimation();
-// descriptiontypeanimation();
+herosectionanimation();
+descriptiontypeanimation();
