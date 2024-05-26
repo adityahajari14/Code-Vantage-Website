@@ -60,11 +60,11 @@ function herosectionanimation() {
         opacity: 0,
         duration: 0.5,
     }, "square")
-    // tl.from(".short-description",{
-    //     scale: 0,
-    //     opacity: 0,
-    //     duration: 0.3,
-    // })
+    tl.from(".short-description",{
+        scale: 0,
+        opacity: 0,
+        duration: 0.3,
+    })
 
 };
 function descriptiontypeanimation(){
@@ -75,5 +75,5 @@ function descriptiontypeanimation(){
     })
 }
 
-// herosectionanimation();
-// descriptiontypeanimation();
+herosectionanimation();
+descriptiontypeanimation();
