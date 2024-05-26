@@ -3,15 +3,169 @@
     src: url(JetBrainsMono-Regular.woff2);
 }
 
+@font-face {
+    font-family: Inter;
+    src: url(Inter-Regular.woff2);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter", sans-serif;
+    font-family: "Inter";
 }
 
 html, body{
     width: 100%;
     height: 100%;
+    background-color: black;
+    color: white;
 }
 
+a{
+    text-decoration: none;
+}
+
+/* Header Section  */
+
+header{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    z-index: 99;
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+}
+
+.logo-extended{
+    width: 19vw;
+    height: auto;
+}
+
+.contact-button{
+    background-color: white;
+    color: black;
+    width: 9vw;
+    height: 3vw;
+    font-weight: 700;
+    font-size: 1vw;
+    border-radius: 30px;
+    border: none;
+}
+
+/* Hero Section  */
+
+.herosection{
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.tagline{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12vw;
+}
+.tagline-first{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10vw;
+}
+
+.tagline-second{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: -2.5vw;
+    margin-left: 15vw;
+}
+
+.tagline-third{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: -2.2vw;
+    margin-left: 40vw;
+}
+
+
+.crafting{
+    font-size: 9.5vw;
+    font-weight: 700;
+    margin-top: 1vw;
+}
+
+.web{
+    font-size: 9.5vw;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.your{
+    font-size: 3.5vw;
+    font-weight: 700;
+    background: linear-gradient(to bottom, #55B8FF, #065DEE);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: var(-webkit-background-clip);
+    padding-top: 1.5vw;
+}
+
+.presence{
+    font-size: 3.5vw;
+    font-weight: 700;
+    background: linear-gradient(to bottom, #55B8FF, #065DEE);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: var(-webkit-background-clip);
+}
+
+.curly1,.curly2{
+    font-size: 9.5vw;
+    font-weight: 500;
+    background: linear-gradient(to bottom, #FD9903, #F7430A);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: var(-webkit-background-clip);
+}
+
+.description{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-left: 15vw;
+    margin-top: 5vw;
+}
+
+.short-description{
+    font-size: 1.5vw;
+    font-weight: 500;
+    text-align: center;
+}
+
+.square1,.square2{
+    font-size: 5.5vw;
+    font-weight: 100;
+}
