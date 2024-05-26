@@ -1,0 +1,19 @@
+{
+  "name": "code-vantage-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git remote https://github.com/adityahajari14/Code-Vantage-Website.git"
+  },
+  "author": "Code Vantage",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
