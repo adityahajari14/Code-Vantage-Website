@@ -74,6 +74,109 @@ function descriptiontypeanimation(){
         startDelay:5000,
     })
 }
+// function horizontalscroll(){
+//     gsap.to(".servicesection .services",{
+//         transform:"translateX(-180vw)",
+//         scrollTrigger:{
+//             trigger:".servicesection",
+//             scroller:"body",
+//             // markers:true,
+//             start:"top -5%",
+//             end:"top -100%",
+//             pin:true,
+//             scrub:1,
+//         }
+//     })
+// }
+function horizontalscroll(){
+    let querylaptop1= window.matchMedia("(min-width:1024px)");
+    let querylaptop2= window.matchMedia("(min-width:768px) and (max-width:1024px)");
+    let querytablet= window.matchMedia("(min-width:425px) and (max-width:768px)");
+    let querymobile1= window.matchMedia("(min-width:375px) and (max-width:425px)");
+    let querymobile2= window.matchMedia("(min-width:320px) and (max-width:375px)");
+    let querymobile3= window.matchMedia("(max-width:320px)");
 
-// herosectionanimation();
-// descriptiontypeanimation();
+    if(querylaptop1.matches){
+        gsap.to(".servicesection .services",{
+            transform:"translateX(-185%)",
+            scrollTrigger:{
+                trigger:".servicesection",
+                scroller:"body",
+                // markers:true,
+                start:"top -5%",
+                end:"top -100%",
+                pin:true,
+                scrub:1,
+            }
+        })
+    } else if(querylaptop2.matches){
+        gsap.to(".servicesection .services",{
+            transform:"translateX(-185%)",
+            scrollTrigger:{
+                trigger:".servicesection",
+                scroller:"body",
+                markers:true,
+                start:"top -5%",
+                end:"top -100%",
+                pin:true,
+                scrub:1,
+            }
+        })
+    } else if(querytablet.matches){
+        gsap.to(".servicesection .services",{
+            transform:"translateX(-195vw)",
+            scrollTrigger:{
+                trigger:".servicesection",
+                scroller:"body",
+                // markers:true,
+                start:"top 0%",
+                end:"top -100%",
+                pin:true,
+                scrub:1,
+            }
+        })
+    } else if(querymobile1.matches){
+        gsap.to(".servicesection .services",{
+            transform:"translateX(-200vw)",
+            scrollTrigger:{
+                trigger:".servicesection",
+                scroller:"body",
+                // markers:true,
+                start:"top 0%",
+                end:"top -100%",
+                pin:true,
+                scrub:1,
+            }
+        })
+    } else if(querymobile2.matches){
+        gsap.to(".servicesection .services",{
+            transform:"translateX(-210vw)",
+            scrollTrigger:{
+                trigger:".servicesection",
+                scroller:"body",
+                // markers:true,
+                start:"top 0%",
+                end:"top -100%",
+                pin:true,
+                scrub:1,
+            }
+        })
+    } else{ 
+        gsap.to(".servicesection .services",{
+            transform:"translateX(-210vw)",
+            scrollTrigger:{
+                trigger:".servicesection",
+                scroller:"body",
+                // markers:true,
+                start:"top 0%",
+                end:"top -100%",
+                pin:true,
+                scrub:1,
+            }
+        })
+    }
+}
+
+herosectionanimation();
+descriptiontypeanimation();
+horizontalscroll();
