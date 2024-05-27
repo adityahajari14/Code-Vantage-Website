@@ -60,11 +60,11 @@ function herosectionanimation() {
         opacity: 0,
         duration: 0.5,
     }, "square")
-    // tl.from(".short-description",{
-    //     scale: 0,
-    //     opacity: 0,
-    //     duration: 0.3,
-    // })
+    tl.from(".short-description",{
+        scale: 0,
+        opacity: 0,
+        duration: 0.3,
+    })
 
 };
 function descriptiontypeanimation(){
@@ -74,20 +74,6 @@ function descriptiontypeanimation(){
         startDelay:5000,
     })
 }
-// function horizontalscroll(){
-//     gsap.to(".servicesection .services",{
-//         transform:"translateX(-180vw)",
-//         scrollTrigger:{
-//             trigger:".servicesection",
-//             scroller:"body",
-//             // markers:true,
-//             start:"top -5%",
-//             end:"top -100%",
-//             pin:true,
-//             scrub:1,
-//         }
-//     })
-// }
 function horizontalscroll(){
     let querylaptop1= window.matchMedia("(min-width:1024px)");
     let querylaptop2= window.matchMedia("(min-width:768px) and (max-width:1024px)");
