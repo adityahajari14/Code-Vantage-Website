@@ -113,6 +113,7 @@ tl3.from(".services-curlytitle2", {
 
 
 
+
 function horizontalscroll(){
     let querylaptop= window.matchMedia("(min-width:768px)");
     
@@ -134,7 +135,89 @@ function horizontalscroll(){
 }
 
 horizontalscroll();
+
 // Services Section Ended
+
+function reshaorange1(){
+    let querylaptop = window.matchMedia("(min-width:1024px)");
+    let querytablet = window.matchMedia("(min-width:768px) and (max-width:1024px)");
+    let queryother = window.matchMedia("(min-width:0px) and (max-width:768px)");
+    
+    if(querylaptop.matches){
+        gsap.to(".resh1,.reshorange1",{
+            height:"15vw",
+            duration:1,
+            scrollTrigger: {
+                trigger: ".resh1",
+                scroller: "body",
+                // markers:true,
+                start: "top 40%",
+            },
+        })
+    } else if(querytablet.matches){
+        gsap.to(".resh1,.reshorange1",{
+            height:"25vw",
+            duration:1,
+            scrollTrigger: {
+                trigger: ".resh1",
+                scroller: "body",
+                start: "top 40%",
+            },
+        })
+    } else{
+        gsap.to(".resh1,.reshorange1",{
+            height:"45vw",
+            duration:1,
+            scrollTrigger: {
+                trigger: ".resh1",
+                scroller: "body",
+                start: "top 40%",
+            },
+        })
+    }
+};
+function reshablue1(){
+    let querylaptop = window.matchMedia("(min-width:1024px)");
+    let querytablet = window.matchMedia("(min-width:768px) and (max-width:1024px)");
+    let queryother = window.matchMedia("(min-width:0px) and (max-width:768px)");
+    
+    if(querylaptop.matches){
+        gsap.to(".resh2,.reshblue1",{
+            height:"15vw",
+            duration:1,
+            scrollTrigger: {
+                trigger: ".resh2",
+                scroller: "body",
+                // markers:true,
+                start: "top 40%",
+            },
+        })
+    } else if(querytablet.matches){
+        gsap.to(".resh2,.reshblue1",{
+            height:"25vw",
+            duration:1,
+            scrollTrigger: {
+                trigger: ".resh2",
+                scroller: "body",
+                start: "top 40%",
+            },
+        })
+    } else{
+        gsap.to(".resh2,.reshblue1",{
+            height:"45vw",
+            duration:1,
+            scrollTrigger: {
+                trigger: ".resh2",
+                scroller: "body",
+                start: "top 40%",
+            },
+        })
+    }
+};
+reshaorange1();
+reshablue1();
+
+
 
 // Portfolio Section Started
 let tl2 = gsap.timeline({
