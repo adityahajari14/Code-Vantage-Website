@@ -43,7 +43,9 @@ a {
     height: 100%;
     border-radius: 30px;
     color: #ffffff;
+    font-size: 1em;
 }
+
 
 .about-nav {
     display: grid;
@@ -68,6 +70,9 @@ a {
 .about-description {
     height: auto;
     padding: 5% 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
@@ -76,10 +81,10 @@ a {
     flex-direction: column;
     gap: 50px;
     width: 80%;
-    margin: 0px auto;
     font-family: 'jetbrains-mono';
     font-size: 1.1em;
     font-weight: 100;
+    margin-left: 1em;
 }
 
 .about-light-blue {
@@ -116,11 +121,30 @@ a {
     justify-self: end;
     display: flex;
     flex-direction: row;
-    column-gap: 15px;
+    column-gap: 1em;
     align-items: center;
 
 }
 
+@media (max-width: 768px) {
+    .about-div{
+        font-size: 0.7em;
+    }
+    
+    .about-description ol{
+        font-size: 1.1em;
+    }
+
+    .about-footer {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    
+    .about-footer-pc-items{
+        display: none;
+    }
+}
 /* About Section Style End*/
 
 
@@ -347,10 +371,6 @@ nav {
 
 .servicetitle {
     font-size: 2.2vw;
-    /* background: linear-gradient(to bottom, #FD9903, #F7430A);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: var(-webkit-background-clip); */
 }
 
 .servicepara {
@@ -488,6 +508,7 @@ nav {
     .services {
         padding-left: 100px;
         margin-top: 1vw;
+        flex-direction: column;
     }
 
     .servicecontent {
@@ -589,6 +610,7 @@ nav {
     .services {
         padding-left: 100px;
         margin-top: 1vw;
+        flex-direction: column;
     }
 
     .servicecontent {
@@ -690,6 +712,7 @@ nav {
     .services {
         padding-left: 100px;
         margin-top: 1vw;
+        flex-direction: column;
     }
 
     .servicecontent {
@@ -790,6 +813,7 @@ nav {
     .services {
         padding-left: 100px;
         margin-top: 1vw;
+        flex-direction: column;
     }
 
     .servicecontent {
@@ -827,20 +851,14 @@ nav {
     width: 90%;
     margin: 8vh auto;
     height: 80vh;
+    overflow-x: hidden;
 }
 
-.portfolio-heading{
-    text-align: center;
+.portfolio .sectiontitle{
     margin-bottom: 8vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 }
 
-.portfolio h2{
-    font-size: 2.5em;
-    display: inline-block;
-}
+
 
 .swiper {
     width: 100%;
@@ -912,14 +930,7 @@ nav {
     }
 }
 
-.portfolio-curly1, .portfolio-curly2{
-    font-size: 2.5em;
-    font-weight: 700;
-    background: linear-gradient(to bottom, #FD9903, #F7430A);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: var(-webkit-background-clip);
-}
+
 
 /* Portfolio Section Ended  */
 

@@ -75,15 +75,48 @@ function descriptiontypeanimation(){
         startDelay:5000,
     })
 }
-function horizontalscroll(){
-    let querylaptop1= window.matchMedia("(min-width:1024px)");
-    let querylaptop2= window.matchMedia("(min-width:768px) and (max-width:1024px)");
-    let querytablet= window.matchMedia("(min-width:425px) and (max-width:768px)");
-    let querymobile1= window.matchMedia("(min-width:375px) and (max-width:425px)");
-    let querymobile2= window.matchMedia("(min-width:320px) and (max-width:375px)");
-    let querymobile3= window.matchMedia("(max-width:320px)");
 
-    if(querylaptop1.matches){
+
+herosectionanimation();
+descriptiontypeanimation();
+
+// Hero Section Ended
+
+// Services Section Started
+let tl3 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".servicesection",
+        scroller: "body",
+        start: "top 60%",
+    }
+});
+
+tl3.from(".services-titlemain", {
+    scale: 0,
+    opacity: 0,
+    duration: 0.5,
+});
+
+tl3.from(".services-curlytitle1", {
+    x: -150,
+    opacity: 0,
+    rotate: 180,
+    duration: 0.5,
+}, "curl");
+
+tl3.from(".services-curlytitle2", {
+    x: 150,
+    opacity: 0,
+    rotate: 180,
+    duration: 0.5,
+}, "curl");
+
+
+
+function horizontalscroll(){
+    let querylaptop= window.matchMedia("(min-width:768px)");
+    
+    if(querylaptop.matches){
         gsap.to(".servicesection .services",{
             transform:"translateX(-185%)",
             scrollTrigger:{
@@ -91,89 +124,19 @@ function horizontalscroll(){
                 scroller:"body",
                 // markers:true,
                 start:"top -5%",
-                end:"top -100%",
-                pin:true,
-                scrub:1,
-            }
-        })
-    } else if(querylaptop2.matches){
-        gsap.to(".servicesection .services",{
-            transform:"translateX(-185%)",
-            scrollTrigger:{
-                trigger:".servicesection",
-                scroller:"body",
-                markers:true,
-                start:"top -5%",
-                end:"top -100%",
-                pin:true,
-                scrub:1,
-            }
-        })
-    } else if(querytablet.matches){
-        gsap.to(".servicesection .services",{
-            transform:"translateX(-195vw)",
-            scrollTrigger:{
-                trigger:".servicesection",
-                scroller:"body",
-                // markers:true,
-                start:"top 0%",
-                end:"top -100%",
-                pin:true,
-                scrub:1,
-            }
-        })
-    } else if(querymobile1.matches){
-        gsap.to(".servicesection .services",{
-            transform:"translateX(-200vw)",
-            scrollTrigger:{
-                trigger:".servicesection",
-                scroller:"body",
-                // markers:true,
-                start:"top 0%",
-                end:"top -100%",
-                pin:true,
-                scrub:1,
-            }
-        })
-    } else if(querymobile2.matches){
-        gsap.to(".servicesection .services",{
-            transform:"translateX(-210vw)",
-            scrollTrigger:{
-                trigger:".servicesection",
-                scroller:"body",
-                // markers:true,
-                start:"top 0%",
-                end:"top -100%",
-                pin:true,
-                scrub:1,
-            }
-        })
-    } else{ 
-        gsap.to(".servicesection .services",{
-            transform:"translateX(-210vw)",
-            scrollTrigger:{
-                trigger:".servicesection",
-                scroller:"body",
-                // markers:true,
-                start:"top 0%",
                 end:"top -100%",
                 pin:true,
                 scrub:1,
             }
         })
     }
+    
 }
 
-herosectionanimation();
-descriptiontypeanimation();
 horizontalscroll();
-// Hero Section Ended
-
-
-
+// Services Section Ended
 
 // Portfolio Section Started
-
 let tl2 = gsap.timeline({
     scrollTrigger: {
         trigger: ".portfolio",
@@ -182,31 +145,32 @@ let tl2 = gsap.timeline({
     }
 });
 
-tl2.from(".portfolio h2", {
+tl2.from(".portfolio-titlemain", {
     scale: 0,
     opacity: 0,
     duration: 0.5,
 });
 
-tl2.from(".portfolio-curly1", {
+tl2.from(".portfolio-curlytitle1", {
     x: -150,
     opacity: 0,
     rotate: 180,
     duration: 0.5,
-}, "curl")
+}, "curl");
 
-tl2.from(".portfolio-curly2", {
+tl2.from(".portfolio-curlytitle2", {
     x: 150,
     opacity: 0,
     rotate: 180,
     duration: 0.5,
-}, "curl")
+}, "curl");
 
 tl2.from(".swiper", {
     scale: 0,
     opacity: 0,
     duration: 0.5,
-})
+});
+
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
@@ -262,7 +226,6 @@ function handleMouseLeave2(){
     });
 }
 
-
 document.querySelector(".portfolio-name1").addEventListener("mouseenter", handleMouseEnter1);
 
 document.querySelector(".portfolio-name1").addEventListener("mouseout", handleMouseLeave1);
@@ -271,5 +234,5 @@ document.querySelector(".portfolio-name2").addEventListener("mouseenter", handle
 
 document.querySelector(".portfolio-name2").addEventListener("mouseout", handleMouseLeave2);
 
-// Portfolio Section Started
+// Portfolio Section Ended
 
