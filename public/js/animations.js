@@ -77,3 +77,103 @@ function descriptiontypeanimation(){
 
 herosectionanimation();
 descriptiontypeanimation();
+
+
+// Portfolio Section
+
+let tl2 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".portfolio",
+        scroller: "body",
+        start: "top 60%"
+    }
+});
+
+tl2.from(".portfolio h2", {
+    scale: 0,
+    opacity: 0,
+    duration: 0.5,
+});
+
+tl2.from(".portfolio-curly1", {
+    x: -150,
+    opacity: 0,
+    rotate: 180,
+    duration: 0.5,
+}, "curl")
+
+tl2.from(".portfolio-curly2", {
+    x: 150,
+    opacity: 0,
+    rotate: 180,
+    duration: 0.5,
+}, "curl")
+
+tl2.from(".swiper", {
+    scale: 0,
+    opacity: 0,
+    duration: 0.5,
+})
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    grabCursor: true,
+    centeredSlides: true,
+    breakpoints: {
+        640: {
+          slidesPerView: 2,
+        }},
+    
+  });
+
+function handleMouseEnter1(){
+    gsap.to(".portfolio-background1", {
+        opacity: 0.6,
+        duration: 0.5
+    });
+    gsap.to(".portfolio-name1", {
+        opacity:1,
+        duration: 0.5
+    });
+}
+function handleMouseEnter2(){
+    gsap.to(".portfolio-background2", {
+        opacity: 0.6,
+        duration: 0.5
+    });
+    gsap.to(".portfolio-name2", {
+        opacity:1,
+        duration: 0.5
+    });
+}
+
+function handleMouseLeave1(){
+    gsap.to(".portfolio-background1", {
+        opacity: 0,
+        duration: 0.5
+    });
+    gsap.to(".portfolio-name1", {
+        opacity:0,
+        duration: 0.5
+    });
+}
+function handleMouseLeave2(){
+    gsap.to(".portfolio-background2", {
+        opacity: 0,
+        duration: 0.5
+    });
+    gsap.to(".portfolio-name2", {
+        opacity:0,
+        duration: 0.5
+    });
+}
+
+
+document.querySelector(".portfolio-name1").addEventListener("mouseenter", handleMouseEnter1);
+
+document.querySelector(".portfolio-name1").addEventListener("mouseout", handleMouseLeave1);
+
+document.querySelector(".portfolio-name2").addEventListener("mouseenter", handleMouseEnter2);
+
+document.querySelector(".portfolio-name2").addEventListener("mouseout", handleMouseLeave2);
