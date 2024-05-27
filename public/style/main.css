@@ -25,6 +25,8 @@ body {
 
 a {
     text-decoration: none;
+    text-decoration-color: #ffffff;
+    color: #ffffff;
 }
 
 
@@ -32,7 +34,7 @@ a {
 
 .about {
     width: 90%;
-    margin: auto;
+    margin: 16vh auto;
 }
 
 .about-div {
@@ -123,7 +125,7 @@ a {
 
 
 
-/* Header Section  */
+/* Header Section Start */
 
 header {
     width: 100%;
@@ -157,12 +159,15 @@ nav {
     border-radius: 30px;
     border: none;
 }
+/* Header Section End */
 
-/* Hero Section  */
+
+/* Hero Section Start */
 
 .herosection {
     width: 100%;
     overflow: hidden;
+    margin-bottom: 10%;
 }
 
 .tagline {
@@ -765,7 +770,7 @@ nav {
     .square2 {
         font-size: 13vw;
     }
-
+  
     /* Service Section  */
     .titlemain {
         font-size: 7vw;
@@ -811,3 +816,110 @@ nav {
         font-size: 2.5vw;
     }
 }
+
+/* Hero Section End */
+
+
+
+/* Portfolio Section Started  */
+
+.portfolio{
+    width: 90%;
+    margin: 8vh auto;
+    height: 80vh;
+}
+
+.portfolio-heading{
+    text-align: center;
+    margin-bottom: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.portfolio h2{
+    font-size: 2.5em;
+    display: inline-block;
+}
+
+.swiper {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 5%;
+  }
+ 
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background-color: #1F1F1F;
+    filter: drop-shadow(0,0, #00000024);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    border-radius: 20px;
+    position: relative;
+}
+  
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.portfolio-background1, .portfolio-background2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000; /* Set your background color */
+    opacity: 0; /* Initial opacity */
+    z-index: 1;
+}
+
+.portfolio-name1, .portfolio-name2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #ffffff;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    z-index: 2; /* Ensure text is above the background */
+    opacity: 0; /* Ensure text opacity is 1 */
+}
+
+
+.swiper-wrapper{
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .portfolio{
+        height: 50vh;
+    }
+
+    .portfolio-name1, .portfolio-name2{
+        font-size: 1.5em;
+    }
+}
+
+.portfolio-curly1, .portfolio-curly2{
+    font-size: 2.5em;
+    font-weight: 700;
+    background: linear-gradient(to bottom, #FD9903, #F7430A);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: var(-webkit-background-clip);
+}
+
+/* Portfolio Section Ended  */
+
