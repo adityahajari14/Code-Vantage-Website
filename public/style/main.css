@@ -442,7 +442,7 @@ nav{
 
 
 
-/* Portfolio Section  */
+/* Portfolio Section Started  */
 
 .portfolio{
     width: 90%;
@@ -542,3 +542,4 @@ nav{
     background-clip: var(-webkit-background-clip);
 }
 
+/* Portfolio Section Ended  */

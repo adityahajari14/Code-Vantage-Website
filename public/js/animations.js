@@ -1,3 +1,4 @@
+// Hero Section Started
 function herosectionanimation() {
 
     // Variable
@@ -77,9 +78,10 @@ function descriptiontypeanimation(){
 
 herosectionanimation();
 descriptiontypeanimation();
+// Hero Section Ended
 
 
-// Portfolio Section
+// Portfolio Section Started
 
 let tl2 = gsap.timeline({
     scrollTrigger: {
@@ -177,3 +179,5 @@ document.querySelector(".portfolio-name1").addEventListener("mouseout", handleMo
 document.querySelector(".portfolio-name2").addEventListener("mouseenter", handleMouseEnter2);
 
 document.querySelector(".portfolio-name2").addEventListener("mouseout", handleMouseLeave2);
+
+// Portfolio Section Started
