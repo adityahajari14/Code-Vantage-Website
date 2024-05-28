@@ -29,15 +29,127 @@ a {
     color: #ffffff;
 }
 
+main{
+    width: 100%;
+}
+
+/* Side bar  */
+
+.sidebar{
+    position: fixed;
+    width: 40px;
+    height: 200px;
+    background: linear-gradient(to bottom, #55B8FF, #065DEE);
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    row-gap: 8px;
+    z-index: 999;
+}
+.navigator{
+    width: 23px;
+    height: auto;
+}
+
+
+/* Blur  */
+.blueblur{
+    position: fixed;
+    width: 46vw;
+    height: 46vw;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #55B8FF, #065DEE);
+    filter: blur(900px);
+    right: -30vw;
+    top: -30vw;
+    opacity:80%;
+}
+.orangeblur{
+    position: fixed;
+    width: 46vw;
+    height: 46vw;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #FEBE49, #FDA92C);
+    filter: blur(900px);
+    left: -30vw;
+    bottom: -30vw;
+    opacity:70%;
+}
+@media (max-width: 768px) {
+    .orangeblur,.blueblur{
+        width: 80vw;
+        height: 80vw;
+    }
+    .orangeblur{
+        opacity: 40%;
+    }
+}
+
+
+/* Custom cursor  */
+.cursor{
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(to bottom, #55B8FF, #065DEE);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 100;
+}
+.cursorstroke{
+    width: 30px;
+    height: 30px;
+    border:2px solid #f77d0a;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 100;
+}
+@media (max-width: 768px) {
+    .cursor,.cursorstroke{
+        display: none;
+    }
+}
+
+/* Scrollbar  */
+body::-webkit-scrollbar{
+    width: 0.5em;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: black;
+    border: 0.1px solid rgba(255, 255, 255, 0.292);
+    border-radius: 100vw;
+    margin-block: .80em;
+
+}
+body::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, #55B8FF, #065DEE);
+    border-radius: 100vw;
+}
+body::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(to bottom, #FD9903, #F7430A);
+    border-radius: 100vw;
+}
+/* @supports(scrollbar-color: #065DEE  black){
+    *{
+        scrollbar-width: auto;
+        scrollbar-color: #065DEE  black;
+    }
+} */
+
+
 /* Resha (Clivage) */
-.resh1,.resh2{
+.resh1,.resh2,.resh3{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 15vw;
 }
-.reshorange1{
+.reshorange1,.reshorange2{
     width: 0.125vw;
     height: 0vw;
     background: linear-gradient(to bottom, #d9d9d900, #FF8C05, #73737300);
@@ -49,28 +161,27 @@ a {
 }
 
 @media (min-width:768px) and (max-width:1024px) {
-    .reshorange{
+    .reshorange1,.reshorange2{
         height: 0vw;
     }
     .reshblue{
         height: 0vw;
     }
-    .resh1,.resh2{
+ .resh3,.resh1,.resh2{
         height: 25vw;
     }
 }
 @media (min-width:0px) and (max-width:768px) {
-    .reshorange{
+    .reshorange1,.reshorange2{
         height: 0vw;
     }
     .reshblue{
         height: 0vw;
     }
-    .resh1,.resh2{
+.resh3,.resh1,.resh2{
         height: 45vw;
     }
 }
-
 
 /* About Section Style Start*/
 
@@ -86,6 +197,8 @@ a {
     border-radius: 30px;
     color: #ffffff;
     font-size: 1em;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -150,8 +263,10 @@ a {
     grid-template-columns: 1fr 1fr;
     height: 50px;
     align-items: center;
+    justify-content: flex-end;
     padding: 0px 30px;
     border-top: 0.3px solid #ffffff5b;
+    width: 100%;
 }
 
 .about-footer span {
@@ -232,7 +347,7 @@ nav {
 
 .herosection {
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     margin-bottom: 10%;
 }
 
