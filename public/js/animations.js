@@ -522,6 +522,92 @@ document.querySelector(".portfolio-name2").addEventListener("mouseenter", handle
 document.querySelector(".portfolio-name2").addEventListener("mouseout", handleMouseLeave2);
 // Portfolio Section Ended
 
+// Process Section Started
+
+let tl4 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".process",
+        scroller: "body",
+        start: "top 60%"
+    }
+});
+
+tl4.from(".process-titlemain", {
+    scale: 0,
+    opacity: 0,
+    duration: 0.5,
+});
+
+tl4.from(".process-curlytitle1", {
+    x: -150,
+    opacity: 0,
+    rotate: 180,
+    duration: 0.5,
+}, "curl");
+
+tl4.from(".process-curlytitle2", {
+    x: 150,
+    opacity: 0,
+    rotate: 180,
+    duration: 0.5,
+}, "curl");
+
+gsap.from(".timeline-progress-bar", {
+    opacity: 0,
+    height: "0%",
+    scrollTrigger: {
+        trigger: ".process-timeline",
+        scroller: "body",
+        start: "top 52%",
+        end: "top 51%",
+        scrub: 1,
+    }
+})
+
+gsap.from(".ti-1", {
+    opacity: 0.4,
+    duration: 1,
+    scrollTrigger: {
+        trigger: ".timeline-trigger-1",
+        scroller: "body",
+        start: "top 50%",
+        end: "bottom 51%",
+        scrub:1
+    }
+})
+gsap.from(".ti-2", {
+    opacity: 0.4,
+    duration: 1,
+    scrollTrigger: {
+        trigger: ".timeline-trigger-2",
+        scroller: "body",
+        start: "top 50%",
+        end: "bottom 51%",
+        scrub:1
+    }
+})
+gsap.from(".ti-3", {
+    opacity: 0.4,
+    duration: 1,
+    scrollTrigger: {
+        trigger: ".timeline-trigger-3",
+        scroller: "body",
+        start: "top 50%",
+        end: "bottom 51%",
+        scrub:1
+    }
+})
+gsap.from(".ti-4", {
+    opacity: 0.4,
+    duration: 1,
+    scrollTrigger: {
+        trigger: ".timeline-trigger-4",
+        scroller: "body",
+        start: "top 50%",
+        end: "bottom 51%",
+        scrub:1
+    }
+})
 // FAQ section 
 
 const faqs = document.querySelectorAll(".faq");
