@@ -152,12 +152,12 @@ body::-webkit-scrollbar-thumb:hover{
     z-index: 1;
     background-color: #000;
 }
-.reshorange1,.reshorange2,.reshorange3{
+.reshorange1,.reshorange2, .reshorange3{
     width: 0.125vw;
     height: 0vw;
     background: linear-gradient(to bottom, #d9d9d900, #FF8C05, #73737300);
 }
-.reshblue1.reshblue2{
+.reshblue1,.reshblue2{
     width: 0.125vw;
     height: 0vw;
     background: linear-gradient(to bottom, #d9d9d900, #057eff, #73737300);
@@ -1162,6 +1162,66 @@ i.active{
     transition: max-height 0.2s;
 }
 
+/* FAQ section  */
+.faqsection{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.faqs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: black;
+    padding: 30px 40px;
+    padding-bottom: 60px;
+    border-radius: 30px;
+    border: 2px solid #eeb406 ;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    /* border-image: linear-gradient(to right, #55B8FF, #065DEE) 100; */
+}
+.faq{
+    width: 100%;
+    margin-top: 2em;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid transparent ;
+    border-image: linear-gradient(to right, transparent 15%, #55B8FF, #065DEE, transparent 85%) 100;
+    cursor: pointer;
+}
+.faq1{
+    border: none;
+}
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.question h2{
+    font-size: 1.2rem;
+}
+.answerdiv{
+    max-height: 0;
+    overflow: hidden;
+}
+i{
+    transition: transform 0.2s;
+}
+i.active{
+    transform: rotate(45deg);
+}
+.answer{
+    padding-top: 1rem;
+    line-height:1.6em;
+    font-size: 0.9rem;
+    transition: max-height 0.2s;
+}
+
 
 .hider{
     z-index: 1;
@@ -1458,7 +1518,7 @@ i.active{
     margin-right: auto;
     display: flex;
     position: relative;
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
 }
 
 .timeline-progress{
@@ -1554,7 +1614,7 @@ i.active{
     min-height: 35px;
     max-height: 35px;
     position: sticky;
-    top: 50vh;
+    top: 52vh;
     box-shadow: 0 0 18px 8px rgba(0, 0, 0, .66);
 }
 
@@ -1613,6 +1673,10 @@ i.active{
     margin-bottom: 0;
     font-size: 1.125rem;
     line-height: 150%;
+}
+
+.ti-4{
+    padding-bottom: 0;
 }
 
 @media (max-width: 767px) {
@@ -1700,4 +1764,9 @@ i.active{
     .timeline-description{
         margin-bottom: 20px;
     }
+}
+
+.faqsection{
+    z-index: 2;
+    background-color: #000;
 }

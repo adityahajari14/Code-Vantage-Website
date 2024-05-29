@@ -564,6 +564,8 @@ gsap.from(".timeline-progress-bar", {
     }
 })
 
+
+
 gsap.from(".ti-1", {
     opacity: 0.4,
     duration: 1,
