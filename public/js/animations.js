@@ -1,3 +1,37 @@
+// sidebar
+gsap.from(".sidebar",{
+    x:-80,
+    duration:1.5,
+    scrollTrigger:{
+        trigger:"main",
+        scroller:"body",
+    }
+})
+
+// Cursor animation 
+function cursoranimation (){
+    let custom = document.querySelector(".cursor");
+let stroke = document.querySelector(".cursorstroke");
+let main = document.querySelector("body");
+main.addEventListener("mousemove",function(dets){
+    gsap.to(custom,{
+        x:dets.x,
+        y:dets.y,
+        duration:0.3,
+    },)
+});
+main.addEventListener("mousemove",function(dets){
+    gsap.to(stroke,{
+        x:dets.x-10,
+        y:dets.y-10,
+        duration:0.7,
+    },)
+});
+};
+cursoranimation();
+
+
+
 // Hero Section Started
 function herosectionanimation() {
 
@@ -71,16 +105,59 @@ function herosectionanimation() {
 function descriptiontypeanimation(){
     let typed = new Typed(".short-description",{
         strings : ["Your one stop solution for <br> everything related web"],
-        typeSpeed : 75,
+        typeSpeed : 30,
         startDelay:5000,
     })
 }
-
-
 herosectionanimation();
 descriptiontypeanimation();
-
 // Hero Section Ended
+
+
+
+// About section
+function aboutsectionanimation(){
+    gsap.from(".about",{
+        y:200,
+        duration:1,
+        opacity:0,
+        scrollTrigger:{
+            trigger:".about",
+            scroller:"body",
+            start:"top 50%",
+            onEnter: abouttype,
+            // markers:true,
+        }
+    })
+    gsap.from(".about-div",{
+        scrollTrigger:{
+            trigger:".about-div",
+            scroller:"body",
+            start:"top 100%",
+            onEnter: abouttype,
+            // markers:true,
+        }
+    })
+    
+    const myabout = `<ol>
+    <li> We create <span class="about-light-blue">visually unique</span> websites with intuitive <span class="about-light-blue">user interfaces</span> to ensure a memorable user experience.</li>
+    <li>Our websites are built to load <span class="about-purple">quickly</span> and run <span class="about-purple">efficiently</span>, providing a seamless browsing experience.</li>
+    <li>We prioritize <span class="about-yellow">SEO</span> to enhance your website's visibility and <span class="about-yellow">ranking</span> on search engines, driving more organic traffic.</li>
+    <li>We deliver exceptional results and a <span class="about-orange">professional</span> process, offering more <span class="about-orange">value</span> than we charge.</li>
+    </ol>`;
+    
+    function abouttype(){
+        let typed = new Typed(".about-description",{
+            strings : [myabout],
+            typeSpeed : 2,
+            startDelay:0,
+            showCursor:true,
+        })
+    }
+};
+aboutsectionanimation();
+
+
 
 // Services Section Started
 let tl3 = gsap.timeline({
@@ -111,9 +188,6 @@ tl3.from(".services-curlytitle2", {
     duration: 0.5,
 }, "curl");
 
-
-
-
 function horizontalscroll(){
     let querylaptop= window.matchMedia("(min-width:768px)");
     
@@ -133,11 +207,24 @@ function horizontalscroll(){
     }
     
 }
+gsap.from(".services",{
+    opacity:0,
+    duration:0.5,
+    opacity:0,
+    scrollTrigger:{
+        trigger:".services",
+        scroller:"body",
+        start:"top 50%",
+        // markers:true,
+    }
+})
 
 horizontalscroll();
-
 // Services Section Ended
 
+
+
+// Resh animation 
 function reshaorange1(){
     let querylaptop = window.matchMedia("(min-width:1024px)");
     let querytablet = window.matchMedia("(min-width:768px) and (max-width:1024px)");
@@ -214,8 +301,47 @@ function reshablue1(){
         })
     }
 };
+function reshaorange2(){
+    let querylaptop = window.matchMedia("(min-width:1024px)");
+    let querytablet = window.matchMedia("(min-width:768px) and (max-width:1024px)");
+    let queryother = window.matchMedia("(min-width:0px) and (max-width:768px)");
+    
+    if(querylaptop.matches){
+        gsap.to(".resh3,.reshorange2",{
+            height:"15vw",
+            duration:1,
+            scrollTrigger: {
+                trigger: ".resh3",
+                scroller: "body",
+                // markers:true,
+                start: "top 40%",
+            },
+        })
+    } else if(querytablet.matches){
+        gsap.to(".resh3,.reshorange2",{
+            height:"25vw",
+            duration:1,
+            scrollTrigger: {
+                trigger: ".resh3",
+                scroller: "body",
+                start: "top 40%",
+            },
+        })
+    } else{
+        gsap.to(".resh3,.reshorange2",{
+            height:"45vw",
+            duration:1,
+            scrollTrigger: {
+                trigger: ".resh3",
+                scroller: "body",
+                start: "top 40%",
+            },
+        })
+    }
+};
 reshaorange1();
 reshablue1();
+reshaorange2();
 
 
 
@@ -316,7 +442,6 @@ document.querySelector(".portfolio-name1").addEventListener("mouseout", handleMo
 document.querySelector(".portfolio-name2").addEventListener("mouseenter", handleMouseEnter2);
 
 document.querySelector(".portfolio-name2").addEventListener("mouseout", handleMouseLeave2);
-
 // Portfolio Section Ended
 
 // Process Section Started
