@@ -124,8 +124,8 @@ function aboutsectionanimation(){
         scrollTrigger:{
             trigger:".about",
             scroller:"body",
-            start:"top 50%",
-            onEnter: abouttype,
+            start:"top 60%",
+            // onEnter: abouttype,
             // markers:true,
         }
     })
@@ -151,7 +151,7 @@ function aboutsectionanimation(){
             strings : [myabout],
             typeSpeed : 2,
             startDelay:0,
-            showCursor:true,
+            showCursor: true
         })
     }
 };
