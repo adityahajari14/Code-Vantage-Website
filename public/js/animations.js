@@ -610,19 +610,26 @@ gsap.from(".ti-4", {
 })
 // FAQ section 
 
-const faqs = document.querySelectorAll(".faq");
-faqs.forEach(faq => {
-    const icon = faq.querySelector("i");
-    const answer = faq.querySelector(".answerdiv")
-    faq.addEventListener("click", () => {
+// const faqs = document.querySelectorAll(".faq");
+// faqs.forEach(faq => {
+//     const icon = faq.querySelector("i");
+//     const answer = faq.querySelector(".answerdiv")
+//     faq.addEventListener("click", () => {
         
-        if(icon.classList.toggle("active")){
-            icon.classList.remove("active");
-            answer.style.maxHeight=null;
-        }else{
-            icon.classList.add("active");
-            answer.style.maxHeight=answer.scrollHeight+ "px";
-        }
+//         if(icon.classList.toggle("active")){
+//             icon.classList.remove("active");
+//             answer.style.maxHeight=null;
+//         }else{
+//             icon.classList.add("active");
+//             answer.style.maxHeight=answer.scrollHeight+ "px";
+//         }
 
-    });
-});
+//     });
+// });
+const faqs = document.getElementsByClassName("faq");
+
+for (i=0;i<faqs.length; i++){
+    faqs[i].addEventListener("click",function(){
+        this.classList.toggle('active')
+    })
+}

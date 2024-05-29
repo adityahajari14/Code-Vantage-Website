@@ -92,7 +92,7 @@ main{
 
 
 /* Custom cursor  */
-.cursor{
+/* .cursor{
     width: 12px;
     height: 12px;
     background: linear-gradient(to bottom, #55B8FF, #065DEE);
@@ -112,7 +112,7 @@ main{
     .cursor,.cursorstroke{
         display: none;
     }
-}
+} */
 
 /* Scrollbar  */
 body::-webkit-scrollbar{
@@ -157,7 +157,7 @@ body::-webkit-scrollbar-thumb:hover{
     height: 0vw;
     background: linear-gradient(to bottom, #d9d9d900, #FF8C05, #73737300);
 }
-.reshblue1.reshblue2{
+.reshblue1,.reshblue2{
     width: 0.125vw;
     height: 0vw;
     background: linear-gradient(to bottom, #d9d9d900, #057eff, #73737300);
@@ -1122,44 +1122,55 @@ nav {
     padding-bottom: 60px;
     border-radius: 30px;
     border: 2px solid #eeb406 ;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
+    margin: 60px auto;
     /* border-image: linear-gradient(to right, #55B8FF, #065DEE) 100; */
 }
 .faq{
     width: 100%;
-    margin-top: 2em;
-    padding-bottom: 1rem;
+    margin: 20px;
+    padding: 10px;
+    padding-bottom: 30px;
+    padding-top: 0;
     border-bottom: 2px solid transparent ;
     border-image: linear-gradient(to right, transparent 15%, #55B8FF, #065DEE, transparent 85%) 100;
     cursor: pointer;
+    list-style: none;
 }
-.faq1{
-    border: none;
-}
-.question{
+.faqs.faq .label{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    padding: 10px;
+    font-size: 1.2vw;
+    cursor: pointer;
 }
-.question h2{
-    font-size: 1.2rem;
+.label::before{
+    content:"+";
+    margin-right: 1em;
+    font-weight: 600;
+    font-size: 1.5vw;
+}
+.active .label::before{
+    content:"-";
+    margin-right: 1em;
+    font-weight: 600;
+    font-size: 1.5vw;
 }
 .answerdiv{
+    padding: 0 10px;
+    line-height: 20px;
+    color: rgb(180, 180, 180);
     max-height: 0;
     overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
 }
-i{
-    transition: transform 0.2s;
-}
-i.active{
-    transform: rotate(45deg);
+.faqs .faq.active .answerdiv{
+    height: 10vh;
+    padding: 10px;
 }
 .answer{
     padding-top: 1rem;
     line-height:1.6em;
     font-size: 0.9rem;
-    transition: max-height 0.2s;
 }
 
 
