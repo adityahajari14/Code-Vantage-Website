@@ -226,7 +226,7 @@ body::-webkit-scrollbar-thumb:hover{
 }
 
 .about-description {
-    height: auto;
+    height: 58vh;
     padding: 5% 0px;
     display: flex;
     align-items: center;
