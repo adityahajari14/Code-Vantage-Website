@@ -339,9 +339,87 @@ function reshaorange2(){
         })
     }
 };
+function reshablue2(){
+    let querylaptop = window.matchMedia("(min-width:1024px)");
+    let querytablet = window.matchMedia("(min-width:768px) and (max-width:1024px)");
+    let queryother = window.matchMedia("(min-width:0px) and (max-width:768px)");
+    
+    if(querylaptop.matches){
+        gsap.to(".resh4,.reshblue2",{
+            height:"15vw",
+            duration:1,
+            scrollTrigger: {
+                trigger: ".resh4",
+                scroller: "body",
+                // markers:true,
+                start: "top 40%",
+            },
+        })
+    } else if(querytablet.matches){
+        gsap.to(".resh4,.reshblue2",{
+            height:"25vw",
+            duration:1,
+            scrollTrigger: {
+                trigger: ".resh4",
+                scroller: "body",
+                start: "top 40%",
+            },
+        })
+    } else{
+        gsap.to(".resh4,.reshblue2",{
+            height:"45vw",
+            duration:1,
+            scrollTrigger: {
+                trigger: ".resh4",
+                scroller: "body",
+                start: "top 40%",
+            },
+        })
+    }
+};
+function reshaorange3(){
+    let querylaptop = window.matchMedia("(min-width:1024px)");
+    let querytablet = window.matchMedia("(min-width:768px) and (max-width:1024px)");
+    let queryother = window.matchMedia("(min-width:0px) and (max-width:768px)");
+    
+    if(querylaptop.matches){
+        gsap.to(".resh5,.reshorange3",{
+            height:"15vw",
+            duration:1,
+            scrollTrigger: {
+                trigger: ".resh5",
+                scroller: "body",
+                // markers:true,
+                start: "top 40%",
+            },
+        })
+    } else if(querytablet.matches){
+        gsap.to(".resh5,.reshorange3",{
+            height:"25vw",
+            duration:1,
+            scrollTrigger: {
+                trigger: ".resh5",
+                scroller: "body",
+                start: "top 40%",
+            },
+        })
+    } else{
+        gsap.to(".resh5,.reshorange3",{
+            height:"45vw",
+            duration:1,
+            scrollTrigger: {
+                trigger: ".resh5",
+                scroller: "body",
+                start: "top 40%",
+            },
+        })
+    }
+};
 reshaorange1();
 reshablue1();
 reshaorange2();
+reshablue2();
+reshaorange3();
 
 
 
@@ -444,3 +522,21 @@ document.querySelector(".portfolio-name2").addEventListener("mouseenter", handle
 document.querySelector(".portfolio-name2").addEventListener("mouseout", handleMouseLeave2);
 // Portfolio Section Ended
 
+// FAQ section 
+
+const faqs = document.querySelectorAll(".faq");
+faqs.forEach(faq => {
+    const icon = faq.querySelector("i");
+    const answer = faq.querySelector(".answerdiv")
+    faq.addEventListener("click", () => {
+        
+        if(icon.classList.toggle("active")){
+            icon.classList.remove("active");
+            answer.style.maxHeight=null;
+        }else{
+            icon.classList.add("active");
+            answer.style.maxHeight=answer.scrollHeight+ "px";
+        }
+
+    });
+});
