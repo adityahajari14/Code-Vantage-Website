@@ -28,7 +28,7 @@ main.addEventListener("mousemove",function(dets){
     },)
 });
 };
-cursoranimation();
+// cursoranimation();
 
 
 
@@ -610,21 +610,3 @@ gsap.from(".ti-4", {
         scrub:1
     }
 })
-// FAQ section 
-
-const faqs = document.querySelectorAll(".faq");
-faqs.forEach(faq => {
-    const icon = faq.querySelector("i");
-    const answer = faq.querySelector(".answerdiv")
-    faq.addEventListener("click", () => {
-        
-        if(icon.classList.toggle("active")){
-            icon.classList.remove("active");
-            answer.style.maxHeight=null;
-        }else{
-            icon.classList.add("active");
-            answer.style.maxHeight=answer.scrollHeight+ "px";
-        }
-
-    });
-});
