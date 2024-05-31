@@ -1305,8 +1305,8 @@ nav {
     padding-bottom: 60px;
     border-radius: 30px;
     border: 2px solid #ee9506;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
     /* border-image: linear-gradient(to right, #55B8FF, #065DEE) 100; */
 }
 
