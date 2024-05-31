@@ -204,6 +204,37 @@ function horizontalscroll(){
                 scrub:1,
             }
         })
+    } else{
+    gsap.from(".service1", {
+        x:200,
+        duration:1,
+        opacity:0,
+        scrollTrigger: {
+            trigger: ".service1",
+            scroller: "body",
+            start: "top 60%"
+        }
+        })
+    gsap.from(".service2", {
+        x:-200,
+        duration:1,
+        opacity:0,
+        scrollTrigger: {
+            trigger: ".service2",
+            scroller: "body",
+            start: "top 60%"
+        }
+        })
+    gsap.from(".service3", {
+        x:200,
+        duration:1,
+        opacity:0,
+        scrollTrigger: {
+            trigger: ".service3",
+            scroller: "body",
+            start: "top 60%"
+        }
+        })
     }
     
 }
@@ -464,10 +495,16 @@ var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     grabCursor: true,
     centeredSlides: true,
+    mousewheel: true,
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+      },
     breakpoints: {
         640: {
           slidesPerView: 2,
-        }},
+        }
+    },
     
   });
 
@@ -610,3 +647,40 @@ gsap.from(".ti-4", {
         scrub:1
     }
 })
+
+
+
+// Social Icon
+
+document.addEventListener('DOMContentLoaded', () => {
+    const socialButton = document.querySelector('.social');
+    const socialIcons = document.querySelector('.social-icon');
+    const icons = document.querySelectorAll('.s-icon');
+
+    // Initially hide the icons
+    gsap.set(icons, { opacity: 0, y: 50 });
+
+    // GSAP timeline for the animation
+    const tl5 = gsap.timeline({ paused: true });
+
+    // Create animation for each icon
+    icons.forEach((icon, index) => {
+        const reverseIndex = icons.length - 1 - index;
+        tl5.to(".social-arrow", {
+            rotate:180
+        })
+        tl5.to(icon, { y: 0, opacity: 1, duration: 0.2 }, reverseIndex * 0.1);
+    });
+
+    // Click event to toggle the animation
+    socialButton.addEventListener('click', () => {
+        if (socialIcons.style.display === "none" || !socialIcons.style.display) {
+            socialIcons.style.display = "flex";
+            tl5.play();
+        } else {
+            tl5.reverse().then(() => {
+                socialIcons.style.display = "none";
+            });
+        }
+    });
+});
