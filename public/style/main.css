@@ -468,9 +468,9 @@ nav {
     background-color: white;
     color: black;
     width: 9vw;
-    height: 3vw;
+    height: 6vh;
     font-weight: 700;
-    font-size: 1vw;
+    font-size: 1em;
     border-radius: 30px;
     border: none;
 }
@@ -863,9 +863,9 @@ nav {
     }
 
     .contact-button {
-        width: 18vw;
-        height: 6vw;
-        font-size: 2vw;
+        width: 22vw;
+        height: 4.8vh;
+        font-size: 0.7em;
     }
 
     .herosection {
@@ -966,9 +966,9 @@ nav {
     }
 
     .contact-button {
-        width: 18vw;
-        height: 6vw;
-        font-size: 2vw;
+        width: 22vw;
+        height: 4vh;
+        font-size: 0.7em;
     }
 
     .herosection {
@@ -1169,11 +1169,10 @@ nav {
     width: 90%;
     margin: 0 auto;
     margin-top: 16vh;
-    height: 80vh;
+    height: auto;
     overflow-x: hidden;
     z-index: 1;
     background-color: #000;
-    overflow-y: hidden;
 }
 
 .portfolio .sectiontitle {
@@ -1196,7 +1195,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40vh;
+    height: auto;
     border-radius: 20px;
     position: relative;
 }
@@ -1268,12 +1267,16 @@ nav {
 
 @media (max-width: 768px) {
     .portfolio {
-        height: 50vh;
+        height: auto;
     }
 
     .portfolio-name1,
     .portfolio-name2 {
         font-size: 1.5em;
+    }
+
+    .portfolio-hider{
+        height: 12vh;
     }
 }
 
@@ -1620,6 +1623,10 @@ i {
     .timeline-description {
         margin-bottom: 48px;
         font-size: 1rem;
+    }
+
+    .hider{
+        height: 20vh;
     }
 }
 

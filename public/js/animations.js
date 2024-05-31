@@ -8,6 +8,7 @@ gsap.from(".sidebar",{
     }
 })
 
+
 // Cursor animation 
 function cursoranimation (){
     let custom = document.querySelector(".cursor");
@@ -269,7 +270,7 @@ function reshaorange1(){
                 trigger: ".resh1",
                 scroller: "body",
                 // markers:true,
-                start: "top 40%",
+                start: "top 60%",
             },
         })
     } else if(querytablet.matches){
@@ -279,7 +280,7 @@ function reshaorange1(){
             scrollTrigger: {
                 trigger: ".resh1",
                 scroller: "body",
-                start: "top 40%",
+                start: "top 60%",
             },
         })
     } else{
@@ -289,7 +290,7 @@ function reshaorange1(){
             scrollTrigger: {
                 trigger: ".resh1",
                 scroller: "body",
-                start: "top 40%",
+                start: "top 60%",
             },
         })
     }
@@ -307,7 +308,7 @@ function reshablue1(){
                 trigger: ".resh2",
                 scroller: "body",
                 // markers:true,
-                start: "top 40%",
+                start: "top 60%",
             },
         })
     } else if(querytablet.matches){
@@ -317,7 +318,7 @@ function reshablue1(){
             scrollTrigger: {
                 trigger: ".resh2",
                 scroller: "body",
-                start: "top 40%",
+                start: "top 60%",
             },
         })
     } else{
@@ -327,7 +328,7 @@ function reshablue1(){
             scrollTrigger: {
                 trigger: ".resh2",
                 scroller: "body",
-                start: "top 40%",
+                start: "top 60%",
             },
         })
     }
@@ -345,7 +346,7 @@ function reshaorange2(){
                 trigger: ".resh3",
                 scroller: "body",
                 // markers:true,
-                start: "top 40%",
+                start: "top 60%",
             },
         })
     } else if(querytablet.matches){
@@ -355,7 +356,7 @@ function reshaorange2(){
             scrollTrigger: {
                 trigger: ".resh3",
                 scroller: "body",
-                start: "top 40%",
+                start: "top 60%",
             },
         })
     } else{
@@ -365,7 +366,7 @@ function reshaorange2(){
             scrollTrigger: {
                 trigger: ".resh3",
                 scroller: "body",
-                start: "top 40%",
+                start: "top 60%",
             },
         })
     }
@@ -383,7 +384,7 @@ function reshablue2(){
                 trigger: ".resh4",
                 scroller: "body",
                 // markers:true,
-                start: "top 40%",
+                start: "top 60%",
             },
         })
     } else if(querytablet.matches){
@@ -393,7 +394,7 @@ function reshablue2(){
             scrollTrigger: {
                 trigger: ".resh4",
                 scroller: "body",
-                start: "top 40%",
+                start: "top 60%",
             },
         })
     } else{
@@ -403,7 +404,7 @@ function reshablue2(){
             scrollTrigger: {
                 trigger: ".resh4",
                 scroller: "body",
-                start: "top 40%",
+                start: "top 60%",
             },
         })
     }
@@ -421,7 +422,7 @@ function reshaorange3(){
                 trigger: ".resh5",
                 scroller: "body",
                 // markers:true,
-                start: "top 40%",
+                start: "top 60%",
             },
         })
     } else if(querytablet.matches){
@@ -431,7 +432,7 @@ function reshaorange3(){
             scrollTrigger: {
                 trigger: ".resh5",
                 scroller: "body",
-                start: "top 40%",
+                start: "top 60%",
             },
         })
     } else{
@@ -441,7 +442,7 @@ function reshaorange3(){
             scrollTrigger: {
                 trigger: ".resh5",
                 scroller: "body",
-                start: "top 40%",
+                start: "top 60%",
             },
         })
     }
@@ -493,9 +494,7 @@ tl2.from(".swiper", {
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
-    grabCursor: true,
     centeredSlides: true,
-    mousewheel: true,
     pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
@@ -652,6 +651,15 @@ gsap.from(".ti-4", {
 
 // Social Icon
 
+gsap.from(".social",{
+    x:80,
+    duration:1.5,
+    scrollTrigger:{
+        trigger:"main",
+        scroller:"body",
+    }
+})
+
 document.addEventListener('DOMContentLoaded', () => {
     const socialButton = document.querySelector('.social');
     const socialIcons = document.querySelector('.social-icon');
@@ -684,3 +692,41 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+
+// FAQ Section
+
+let tl5 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".faqsection",
+        scroller: "body",
+        start: "top 60%"
+    }
+});
+
+tl5.from(".faq-titlemain", {
+    scale: 0,
+    opacity: 0,
+    duration: 0.5,
+});
+
+tl5.from(".faq-curlytitle1", {
+    x: -150,
+    opacity: 0,
+    rotate: 180,
+    duration: 0.5,
+}, "curl");
+
+tl5.from(".faq-curlytitle2", {
+    x: 150,
+    opacity: 0,
+    rotate: 180,
+    duration: 0.5,
+}, "curl");
+
+tl5.from(".faqs", {
+    y:200,
+    duration:1,
+    opacity:0,
+})
