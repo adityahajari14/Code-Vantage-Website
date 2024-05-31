@@ -702,6 +702,10 @@ nav {
     justify-content: center;
 }
 
+.servicehighlights-js{
+    height: 1.6rem;
+    width: 1.6rem;
+}
 
 
 /* Media Query Started */
