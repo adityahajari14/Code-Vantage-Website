@@ -101,6 +101,98 @@ main {
     }
 }
 
+/* Social Icon Start */
+
+.social{
+    z-index: 1000;
+    position: fixed;
+    bottom: 30px;
+    right: 2vw;
+    background: linear-gradient(to bottom, #FD9903, #F7430A);
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 1.3em;
+    font-family: sans-serif;
+    line-height: 40px;
+}
+
+
+
+.social-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: auto;
+    width: 60px;
+    bottom: 100px;
+    right: 2vw;
+    z-index: 999;
+    line-height: 40px;
+}
+
+.s-icon{
+    opacity: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background: #fff;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    overflow: hidden;
+    box-shadow: 5px 10px 20px rgba(150, 150, 150, .3);
+    transition: all .3s ease-out;
+    z-index: 999;
+}
+
+.s-icon:hover i{
+    color: #fff;
+}
+.s-icon .fa-facebook-f{
+    color: #1A6ED8;
+}
+.fb:hover{
+    background: #1A6ED8;
+}
+.s-icon .fa-twitter{
+    color: #1DA1F2;
+}
+.twt:hover{
+    background: #1DA1F2;
+}
+.s-icon .fa-linkedin-in{
+    color: #0077B5;
+}
+.lnk:hover{
+    background: #0077B5;
+}
+.s-icon .fa-github{
+    color: #000;
+}
+.git:hover{
+    background: #000;
+}
+.s-icon .fa-youtube{
+    color: #FE0000;
+}
+.yt:hover{
+    background: #FE0000;
+}
+
+.social-icon.hidden {
+    display: none;
+}
+
+/* Social Icon End */
+
+
+
 
 /* Custom cursor  */
 /* .cursor{
@@ -264,7 +356,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .about-description {
-    height: 58vh;
+    height: 60vh;
     padding: 5% 0px;
     display: flex;
     align-items: center;
@@ -391,7 +483,7 @@ nav {
 .herosection {
     width: 100%;
     overflow-x: hidden;
-    margin-bottom: 10%;
+    margin-bottom: 16vh;
 }
 
 .tagline {
@@ -506,7 +598,8 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 5vw;
+    padding-top: 16vh;
+    padding-bottom: 16vh;
     z-index: 0;
 }
 
@@ -589,6 +682,27 @@ nav {
     border-radius: 30px;
     border: none;
 }
+
+.servicehighlightdiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.servicehighlights{
+    /* background-color: white; */
+    height: 2rem;
+    width: 2rem;
+    border-radius: 30px;
+    /* border: 2px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 /* Media Query Started */
 
@@ -704,6 +818,7 @@ nav {
     .service2,
     .service3 {
         flex-direction: column-reverse;
+        margin: 5vh 0;
     }
 
     .services {
@@ -806,6 +921,7 @@ nav {
     .service2,
     .service3 {
         flex-direction: column-reverse;
+        margin: 5vh 0;
     }
 
     .services {
@@ -908,11 +1024,11 @@ nav {
     .service2,
     .service3 {
         flex-direction: column-reverse;
+        margin: 5vh 0;
     }
 
     .services {
         padding-left: 100px;
-        margin-top: 1vw;
         flex-direction: column;
     }
 
@@ -1009,6 +1125,7 @@ nav {
     .service2,
     .service3 {
         flex-direction: column-reverse;
+        margin: 5vh 0;
     }
 
     .services {
@@ -1051,17 +1168,12 @@ nav {
 .portfolio {
     width: 90%;
     margin: 0 auto;
-    margin-top: 8vh;
-    margin: 0 auto;
-    margin-top: 8vh;
+    margin-top: 16vh;
     height: 80vh;
     overflow-x: hidden;
-    padding-bottom: 8vh;
     z-index: 1;
     background-color: #000;
-    padding-bottom: 8vh;
-    z-index: 1;
-    background-color: #000;
+    overflow-y: hidden;
 }
 
 .portfolio .sectiontitle {
@@ -1135,6 +1247,25 @@ nav {
     border-radius: 20px;
 }
 
+.swiper-pagination{
+    position: relative !important;
+    margin-top: 20px;
+}
+
+.swiper-pagination-bullet{
+    background-color: #3d3d3d !important;
+}
+
+.swiper-pagination-bullet{
+    background-color: #ffffff !important;
+}
+
+.portfolio-hider{
+    height: 16vh;
+    z-index: 1;
+    background-color: #000;
+}
+
 @media (max-width: 768px) {
     .portfolio {
         height: 50vh;
@@ -1147,6 +1278,7 @@ nav {
 }
 
 
+
 /* Portfolio Section Ended  */
 
 /* FAQ section  */
@@ -1157,7 +1289,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 8vh;
+    padding-top: 16vh;
     z-index: 2;
     background-color: #000;
 }
@@ -1238,7 +1370,8 @@ i {
     padding-bottom: 8vh;
     z-index: 1;
     background-color: #000;
-    padding-top: 8vh;
+    padding-top: 16vh;
+    overflow-x: hidden;
 }
 
 .process-timeline {
@@ -1319,7 +1452,7 @@ i {
     color: #065DEE;
     overflow-wrap: normal;
     font-family: "Oswald", sans-serif;
-    font-size: 15em;
+    font-size: 12em;
     font-weight: 500;
     line-height: 200px;
     position: absolute;
@@ -1365,7 +1498,7 @@ i {
 .timeline-heading {
     text-align: left;
     margin-bottom: 20px;
-    font-size: 1.8em;
+    font-size: 2.5em;
     font-weight: 600;
     color: #fff;
     font-family: "Inter", sans-serif;
@@ -1382,7 +1515,7 @@ i {
 .timeline-image-div {
     box-shadow: none;
     border-style: none;
-    width: auto;
+    width: 80%;
     height: auto;
     margin-left: 0;
     margin-right: 0;
@@ -1412,8 +1545,31 @@ i {
 }
 
 .hider{
-    height: 20vh;
+    height: 30vh;
     background-color: black;
+}
+
+@media (max-width: 1200px){
+    .timeline-step-number{
+        font-size: 10em;
+        left: 10%;
+    }
+
+    .timeline-step-number-text{
+        font-size: 2.6em;
+    }
+}
+@media (max-width: 992px){
+    .timeline-step-number{
+        font-size: 8em;
+        left: 0;
+    }
+
+    .timeline-step-number-text{
+        font-size: 2.6em;
+    }
+
+
 }
 
 @media (max-width: 767px) {
@@ -1446,7 +1602,7 @@ i {
     }
 
     .timeline-step-number {
-        font-size: 12em;
+        font-size: 8em;
         display: block;
         top: -489%;
         left: -2%;
@@ -1463,6 +1619,7 @@ i {
 
     .timeline-description {
         margin-bottom: 48px;
+        font-size: 1rem;
     }
 }
 
@@ -1500,6 +1657,9 @@ i {
 
     .timeline-description {
         margin-bottom: 20px;
+    }
+    .timeline-image-div{
+        width: 100%;
     }
 }
 
