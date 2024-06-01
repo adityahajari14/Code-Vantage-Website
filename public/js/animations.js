@@ -498,6 +498,7 @@ var swiper = new Swiper(".mySwiper", {
     pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
+        clickable: true
       },
     breakpoints: {
         640: {
@@ -674,9 +675,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create animation for each icon
     icons.forEach((icon, index) => {
         const reverseIndex = icons.length - 1 - index;
-        tl5.to(".social-arrow", {
-            rotate:180
-        })
+        
         tl5.to(icon, { y: 0, opacity: 1, duration: 0.2 }, reverseIndex * 0.1);
     });
 
@@ -685,9 +684,15 @@ document.addEventListener('DOMContentLoaded', () => {
         if (socialIcons.style.display === "none" || !socialIcons.style.display) {
             socialIcons.style.display = "flex";
             tl5.play();
+            gsap.to(".social-arrow", {
+                rotate:180
+            });
         } else {
             tl5.reverse().then(() => {
                 socialIcons.style.display = "none";
+            });
+            gsap.to(".social-arrow", {
+                rotate:0
             });
         }
     });
@@ -725,8 +730,13 @@ tl5.from(".faq-curlytitle2", {
     duration: 0.5,
 }, "curl");
 
-tl5.from(".faqs", {
+gsap.from(".faqs", {
     y:200,
     duration:1,
     opacity:0,
+    scrollTrigger: {
+        trigger: ".faqs",
+        scroller: "body",
+        start: "top 60%"
+    }
 })

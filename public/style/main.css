@@ -160,11 +160,11 @@ main {
 .fb:hover{
     background: #1A6ED8;
 }
-.s-icon .fa-twitter{
-    color: #1DA1F2;
+.s-icon .fa-x-twitter{
+    color: #000;
 }
 .twt:hover{
-    background: #1DA1F2;
+    background: #000000;
 }
 .s-icon .fa-linkedin-in{
     color: #0077B5;
@@ -172,11 +172,11 @@ main {
 .lnk:hover{
     background: #0077B5;
 }
-.s-icon .fa-github{
-    color: #000;
+.s-icon .fa-instagram{
+    color: #bc1888; 
 }
-.git:hover{
-    background: #000;
+.insta:hover{
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
 }
 .s-icon .fa-youtube{
     color: #FE0000;
@@ -705,6 +705,11 @@ nav {
 .servicehighlights-js{
     height: 1.6rem;
     width: 1.6rem;
+}
+
+.servicehighlights-relume img{
+    height: 3rem;
+    width: 3rem;
 }
 
 
