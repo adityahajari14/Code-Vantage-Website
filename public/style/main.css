@@ -22,7 +22,7 @@ body {
     background-color: #000;
     font-family: "Inter";
     color: white;
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
     /* cursor: none; */
 }
 
