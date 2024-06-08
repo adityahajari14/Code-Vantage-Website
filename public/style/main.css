@@ -249,7 +249,7 @@ body::-webkit-scrollbar-thumb:hover {
 } */
 
 
-/* Resha (Clivage) */
+/* Resha */
 .resh1,
 .resh2,
 .resh3,
@@ -694,8 +694,8 @@ nav {
 
 .servicehighlights{
     /* background-color: white; */
-    height: 2rem;
-    width: 2rem;
+    height: 2.5rem;
+    width: 2.5rem;
     border-radius: 30px;
     /* border: 2px solid white; */
     display: flex;
@@ -703,14 +703,16 @@ nav {
     justify-content: center;
 }
 
-.servicehighlights-js{
-    height: 1.6rem;
-    width: 1.6rem;
+
+
+.servicehighlights img{
+    height: 2rem;
+    width: 2rem;
 }
 
-.servicehighlights-relume img{
-    height: 3rem;
-    width: 3rem;
+.servicehighlights-design{
+    height: 2.5rem;
+    width: 2.5rem;
 }
 
 

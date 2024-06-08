@@ -106,7 +106,7 @@ function herosectionanimation() {
 function descriptiontypeanimation(){
     let typed = new Typed(".short-description",{
         strings : ["Your one stop solution for <br> everything related web"],
-        typeSpeed : 30,
+        typeSpeed : 15,
         startDelay:5000,
     })
 }
