@@ -150,9 +150,9 @@ function aboutsectionanimation(){
     function abouttype(){
         let typed = new Typed(".about-description",{
             strings : [myabout],
-            typeSpeed : 2,
+            typeSpeed : 0,
             startDelay:0,
-            showCursor: true
+            showCursor: false
         })
     }
 };
@@ -194,7 +194,7 @@ function horizontalscroll(){
     
     if(querylaptop.matches){
         gsap.to(".servicesection .services",{
-            transform:"translateX(-185%)",
+            x: "-185%",
             scrollTrigger:{
                 trigger:".servicesection",
                 scroller:"body",
@@ -203,6 +203,13 @@ function horizontalscroll(){
                 end:"top -100%",
                 pin:true,
                 scrub:1,
+                snap: {
+                    snapTo: [0, 0.28, 1], // Snap points in percentages
+                    duration: { max: 0.01 }, // Optional: Adjust snapping speed
+                    delay: 0, // Optional: Adjust snapping delay
+                    duration:0.2,
+                    ease: "none" // Optional: Adjust snapping ease
+                },
             }
         })
     } else{
@@ -605,7 +612,7 @@ gsap.from(".timeline-progress-bar", {
 
 gsap.from(".ti-1", {
     opacity: 0.4,
-    duration: 1,
+    // duration: 1,
     scrollTrigger: {
         trigger: ".timeline-trigger-1",
         scroller: "body",
